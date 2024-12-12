@@ -114,7 +114,7 @@ Rectangle {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.bottom
             margins: config.itemsSpacing
-            // Offset to ignore the size of the small button for centering 
+            // Offset to ignore the size of the small button for centering
             horizontalCenterOffset: 50
         }
 
