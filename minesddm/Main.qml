@@ -88,7 +88,7 @@ Rectangle {
         }
 
         // Session selector button
-        Button {
+        CustomButton {
             text: "Session: " + sessions[currentSessionIndex]
             onCustomClicked: {
                 currentSessionIndex = (currentSessionIndex + 1) % sessions.length;
@@ -127,8 +127,9 @@ Rectangle {
         }
 
         // Login button
-        Button {
+        CustomButton {
             text: "Login"
+            enabled: root.username !== "" && root.password !== ""
             onCustomClicked: {
                 console.log(root.username);
                 console.log(root.password);
@@ -136,7 +137,7 @@ Rectangle {
         }
 
         // Do Action button
-        Button {
+        CustomButton {
             text: actions[currentActionIndex]
             onCustomClicked: {
                 console.log("Action: " + actions[currentActionIndex]);
@@ -144,7 +145,7 @@ Rectangle {
         }
 
         // Action selector button
-        Button {
+        CustomButton {
             text: "->"
             onCustomClicked: {
                 currentActionIndex = (currentActionIndex + 1) % actions.length;
