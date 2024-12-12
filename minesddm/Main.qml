@@ -11,7 +11,6 @@ Rectangle {
     property string username: usernameTextField.text
     property string password: passswordTextField.text
     // Session properties
-    property var sessions: ["Hyprland", "Sway", "i3w", "Gnome"]
     property int sessionIndex: 0
     // Define a mapping of actions to their corresponding methods and availability
     property var actionMap: ({
@@ -113,11 +112,9 @@ Rectangle {
 
         // Session selector button
         CustomButton {
-            id: cb
-
-            text: "Session: "
+            text: "Session: " + root.sessionInfo
             onCustomClicked: {
-                root.sessionIndex = (root.sessionIndex + 1) % root.sessionModel.count;
+                root.sessionIndex = (root.sessionIndex + 1) % sessionModel.count;
             }
 
             anchors {
