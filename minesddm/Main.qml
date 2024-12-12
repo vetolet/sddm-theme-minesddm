@@ -123,18 +123,6 @@ Rectangle {
 
         }
 
-        // Keyboard tips
-        Text {
-            text: "[F1] to ... | [F2] to ... | [ESC] to ..."
-            color: config.darkText
-
-            font {
-                family: minecraftFont.name
-                pixelSize: config.fontPixelSize
-            }
-
-        }
-
     }
 
     // Buttons container
