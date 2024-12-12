@@ -10,7 +10,7 @@ Rectangle {
     property var sessions: ["Hyprland", "Sway", "i3w", "Gnome"]
     property int currentSessionIndex: 0
     // Property for action list and current index
-    property var actions: ["Power Off", "Reboot" "Suspend", "Hibernate", "Hybrid Sleep"]
+    property var actions: ["Power Off", "Reboot", "Suspend", "Hibernate", "Hybrid Sleep"]
     property int currentActionIndex: 0
 
     height: Screen.height
