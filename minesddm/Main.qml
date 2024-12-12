@@ -133,6 +133,7 @@ Rectangle {
             onCustomClicked: {
                 console.log(root.username);
                 console.log(root.password);
+                sddm.login(rood.user, root.password, session);
             }
         }
 
@@ -153,6 +154,19 @@ Rectangle {
             width: 50
         }
 
+    }
+
+    Connections {
+        function onLoginSucceeded() {
+            coverScreen.start();
+        }
+
+        function onLoginFailed() {
+            passswordTextField.text = "";
+            passswordTextField.focus = true;
+        }
+
+        target: sddm
     }
 
 }
