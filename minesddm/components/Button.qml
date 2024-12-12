@@ -8,8 +8,8 @@ Image {
 
     signal customClicked()
 
-    width: 400
-    height: 50
+    width: config.buttonWidth
+    height: config.itemHeight
     source: "../images/button_background.png"
     fillMode: Image.Stretch
 

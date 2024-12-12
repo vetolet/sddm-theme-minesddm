@@ -67,16 +67,20 @@ Rectangle {
             color: "transparent" // Invisible spacer
         }
 
-        // Username label and field container
-        InputField {
+        InputContainer {
             label: "World Name"
-            placeholder: "Username_"
+
+            UsernameTextField {
+            }
+
         }
 
-        // Password label and field container
-        InputField {
+        InputContainer {
             label: "Seed"
-            placeholder: "Password_"
+
+            PasswordTextField {
+            }
+
         }
 
         // Session selector button
