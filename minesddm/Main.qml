@@ -11,7 +11,8 @@ Rectangle {
     property string username: usernameTextField.text
     property string password: passswordTextField.text
     // Session properties
-    property int sessionIndex: 0
+    property int sessionIndex: sessionModel.lastIndex
+    property var sessions: []
     // Define a mapping of actions to their corresponding methods and availability
     property var actionMap: ({
         "Power Off": {
@@ -112,7 +113,7 @@ Rectangle {
 
         // Session selector button
         CustomButton {
-            text: "Session: " + root.sessionInfo
+            text: "Session: " + root.sessions[root.sessionIndex].name
             onCustomClicked: {
                 root.sessionIndex = (root.sessionIndex + 1) % sessionModel.count;
             }
