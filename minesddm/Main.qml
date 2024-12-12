@@ -111,6 +111,9 @@ Rectangle {
 
         }
 
+        SessionHandler {
+        }
+
         // Session selector button
         CustomButton {
             text: "Session: " + root.sessions[root.sessionIndex].name
