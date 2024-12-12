@@ -10,13 +10,12 @@ Rectangle {
     property var sessions: ["Hyprland", "Sway", "i3w", "Gnome"]
     property int currentSessionIndex: 0
     // Property for action list and current index
-    property var actions: ["Turn Off", "Sleep", "Hibernate", "Reboot"]
+    property var actions: ["Poweroff", "Suspend", "Hibernate", "Reboot"]
     property int currentActionIndex: 0
 
     height: Screen.height
     width: Screen.width
 
-    // Load the Minecraft font globally
     FontLoader {
         id: minecraftFont
 
