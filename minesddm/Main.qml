@@ -10,7 +10,7 @@ Rectangle {
     // Login properties
     property string username: usernameTextField.text
     property string password: passswordTextField.text
-    // Session properties
+    // Session properties. Please look at the SessionHandler.qml file to understand hwo these properties work
     property int sessionIndex: sessionModel.lastIndex
     property var sessions: []
     // Define a mapping of actions to their corresponding methods and availability
@@ -111,10 +111,8 @@ Rectangle {
 
         }
 
-        SessionHandler {
-        }
-
         // Session selector button
+        // Please look at the SessionHandler.qml file to understand what is happening here
         CustomButton {
             text: "Session: " + root.sessions[root.sessionIndex].name
             onCustomClicked: {
@@ -123,6 +121,11 @@ Rectangle {
 
             anchors {
                 horizontalCenter: parent.horizontalCenter
+            }
+
+            SessionHandler {
+                // Please look at the SessionHandler.qml file to understand what is happening here
+
             }
 
         }
