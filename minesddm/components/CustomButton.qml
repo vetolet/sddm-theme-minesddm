@@ -65,8 +65,8 @@ Button {
 
         anchors {
             centerIn: customButton
-            horizontalCenterOffset: 2.5
-            verticalCenterOffset: 2.5
+            horizontalCenterOffset: config.horizontalShadowOffset
+            verticalCenterOffset: config.verticalShadowOffset
         }
 
         font {

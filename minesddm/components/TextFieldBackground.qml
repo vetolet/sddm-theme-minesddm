@@ -6,7 +6,7 @@ Rectangle {
 
     border {
         color: "white"
-        width: 2.5
+        width: config.labelBorderWidth
     }
 
 }

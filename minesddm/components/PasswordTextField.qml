@@ -3,7 +3,7 @@ import QtQuick.Controls 2.15
 
 TextField {
     echoMode: config.hidePassword === "true" ? TextInput.Password : TextInput.Normal
-    passwordCharacter: "*"
+    passwordCharacter: config.passwordEchoCharacter
     width: config.inputWidth
     height: config.itemHeight
     color: config.lightText
