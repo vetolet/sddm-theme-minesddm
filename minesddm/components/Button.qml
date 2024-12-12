@@ -22,6 +22,25 @@ Image {
             fill: parent
         }
 
+        // Shadow
+        Text {
+            text: button.text
+            color: config.shadowText
+
+            anchors {
+                centerIn: parent
+                horizontalCenterOffset: 2.5
+                verticalCenterOffset: 2.5
+            }
+
+            font {
+                family: minecraftFont.name
+                pixelSize: config.fontPixelSize
+            }
+
+        }
+
+        // Text
         Text {
             text: button.text
             color: config.lightText
