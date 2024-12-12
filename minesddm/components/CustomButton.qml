@@ -29,7 +29,7 @@ Button {
             }
 
             PropertyChanges {
-                target: customButtonText
+                target: customButtonContentText
                 color: config.selectedText
             }
 
@@ -49,7 +49,7 @@ Button {
             }
 
             PropertyChanges {
-                target: customButtonText
+                target: customButtonContentText
                 color: config.darkText
             }
 
@@ -64,7 +64,7 @@ Button {
         z: -1
 
         anchors {
-            centerIn: parent
+            centerIn: customButton
             horizontalCenterOffset: 2.5
             verticalCenterOffset: 2.5
         }
@@ -77,7 +77,7 @@ Button {
     }
 
     contentItem: Text {
-        id: customButtonText
+        id: customButtonContentText
 
         text: customButton.text
         horizontalAlignment: Text.AlignHCenter
