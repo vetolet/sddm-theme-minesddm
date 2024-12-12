@@ -6,6 +6,8 @@ import "components"
 Rectangle {
     id: root
 
+    property string username: usernameTextField.text
+    property string password: passswordTextField.text
     // Property to hold session list and current index
     property var sessions: ["Hyprland", "Sway", "i3w", "Gnome"]
     property int currentSessionIndex: 0
@@ -71,6 +73,7 @@ Rectangle {
             label: "World Name"
 
             UsernameTextField {
+                id: usernameTextField
             }
 
         }
@@ -79,6 +82,7 @@ Rectangle {
             label: "Seed"
 
             PasswordTextField {
+                id: passswordTextField
             }
 
         }
@@ -126,7 +130,8 @@ Rectangle {
         Button {
             text: "Login"
             onCustomClicked: {
-                console.log("Logged in");
+                console.log(root.username);
+                console.log(root.password);
             }
         }
 
