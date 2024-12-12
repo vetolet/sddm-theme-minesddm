@@ -42,12 +42,14 @@ Rectangle {
     height: Screen.height
     width: Screen.width
 
+    // Load the minecraft font
     FontLoader {
         id: minecraftFont
 
         source: "resources/MinecraftRegular-Bmg3.otf"
     }
 
+    // This is the background image
     Image {
         source: "images/dirt.png"
         fillMode: Image.PreserveAspectCrop
@@ -92,7 +94,8 @@ Rectangle {
             height: config.itemsSpacing * 0.5
             color: "transparent" // Invisible spacer
         }
-
+        
+        // Username field
         InputContainer {
             label: "World Name"
 
@@ -102,6 +105,7 @@ Rectangle {
 
         }
 
+        // Password field
         InputContainer {
             label: "Seed"
 
@@ -132,7 +136,6 @@ Rectangle {
 
     }
 
-    // Buttons container
     Row {
         spacing: config.itemsSpacing
 
@@ -184,6 +187,7 @@ Rectangle {
         }
 
         function onLoginFailed() {
+            console.log("Login failed"); // TODO
             passswordTextField.text = "";
             passswordTextField.focus = true;
         }
