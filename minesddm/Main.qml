@@ -1,3 +1,4 @@
+import QtQml.Models 2.15
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Window 2.15
@@ -11,7 +12,7 @@ Rectangle {
     property string password: passswordTextField.text
     // Session properties
     property var sessions: ["Hyprland", "Sway", "i3w", "Gnome"]
-    property int currentSessionIndex: 0
+    property int sessionIndex: 0
     // Define a mapping of actions to their corresponding methods and availability
     property var actionMap: ({
         "Power Off": {
@@ -112,9 +113,11 @@ Rectangle {
 
         // Session selector button
         CustomButton {
-            text: "Session: " + root.sessions[root.currentSessionIndex]
+            id: cb
+
+            text: "Session: "
             onCustomClicked: {
-                root.currentSessionIndex = (root.currentSessionIndex + 1) % root.sessions.length;
+                root.sessionIndex = (root.sessionIndex + 1) % root.sessionModel.count;
             }
 
             anchors {
@@ -144,7 +147,7 @@ Rectangle {
             onCustomClicked: {
                 console.log(root.username);
                 console.log(root.password);
-                sddm.login(root.user, root.password, session); // TODO
+                sddm.login(root.user, root.password, root.sessionIndex);
             }
         }
 
