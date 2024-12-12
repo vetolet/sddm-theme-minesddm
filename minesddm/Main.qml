@@ -6,13 +6,36 @@ import "components"
 Rectangle {
     id: root
 
+    // Login properties
     property string username: usernameTextField.text
     property string password: passswordTextField.text
-    // Property to hold session list and current index
+    // Session properties
     property var sessions: ["Hyprland", "Sway", "i3w", "Gnome"]
     property int currentSessionIndex: 0
-    // Property for action list and current index
-    property var actions: ["Power Off", "Reboot", "Suspend", "Hibernate", "Hybrid Sleep"]
+    // Define a mapping of actions to their corresponding methods and availability
+    property var actionMap: ({
+        "Power Off": {
+            "enabled": sddm.canPowerOff,
+            "method": sddm.powerOff
+        },
+        "Reboot": {
+            "enabled": sddm.canReboot,
+            "method": sddm.reboot
+        },
+        "Suspend": {
+            "enabled": sddm.canSuspend,
+            "method": sddm.suspend
+        },
+        "Hibernate": {
+            "enabled": sddm.canHibernate,
+            "method": sddm.hibernate
+        },
+        "Hybrid Sleep": {
+            "enabled": sddm.canHybridSleep,
+            "method": sddm.hybridSleep
+        }
+    })
+    property var actionKeys: Object.keys(root.actionMap)
     property int currentActionIndex: 0
 
     height: Screen.height
@@ -89,9 +112,9 @@ Rectangle {
 
         // Session selector button
         CustomButton {
-            text: "Session: " + sessions[currentSessionIndex]
+            text: "Session: " + root.sessions[root.currentSessionIndex]
             onCustomClicked: {
-                currentSessionIndex = (currentSessionIndex + 1) % sessions.length;
+                root.currentSessionIndex = (root.currentSessionIndex + 1) % root.sessions.length;
             }
 
             anchors {
@@ -133,32 +156,36 @@ Rectangle {
             onCustomClicked: {
                 console.log(root.username);
                 console.log(root.password);
-                sddm.login(rood.user, root.password, session);
+                sddm.login(root.user, root.password, session); // TODO
             }
         }
 
         // Do Action button
         CustomButton {
-            text: actions[currentActionIndex]
+            text: root.actionKeys[root.currentActionIndex]
             onCustomClicked: {
-                console.log("Action: " + actions[currentActionIndex]);
+                var action = root.actionMap[root.actionKeys[root.currentActionIndex]];
+                if (action.enabled)
+                    action.method();
+                else
+                    console.log(root.actionKeys[root.currentActionIndex] + " is not supported");
             }
         }
 
         // Action selector button
         CustomButton {
             text: "->"
-            onCustomClicked: {
-                currentActionIndex = (currentActionIndex + 1) % actions.length;
-            }
             width: 50
+            onCustomClicked: {
+                root.currentActionIndex = (root.currentActionIndex + 1) % root.actionKeys.length;
+            }
         }
 
     }
 
     Connections {
         function onLoginSucceeded() {
-            coverScreen.start();
+            console.log("Login succeeded"); // TODO
         }
 
         function onLoginFailed() {
