@@ -36,8 +36,8 @@ Rectangle {
     property var actionKeys: Object.keys(root.actionMap)
     property int currentActionIndex: 0
 
-    height: Screen.height
-    width: Screen.width
+    height: config.screenHeight || Screen.height
+    width: config.screenWidth || Screen.ScreenWidth
 
     // Load the minecraft font
     FontLoader {
