@@ -49,9 +49,9 @@ Modify the `theme.conf` file to adjust the appearance and behavior of the theme.
 ![Preview of the MinesDDM theme](screenshots/minesddm_preview_1.png)
 ![Preview of the MinesDDM theme](screenshots/minesddm_preview_2.png)
 ![Preview of the MinesDDM theme](screenshots/minesddm_preview_3.png)
-![Preview of the Minecraft 1.8 menu](minecraft_preview_1.png)
-![Preview of the Minecraft 1.8 menu](minecraft_preview_2.png)
-![Preview of the Minecraft 1.8 menu](minecraft_preview_3.png)
+![Preview of the Minecraft 1.8 menu](minecraft_preview_1.jpeg)
+![Preview of the Minecraft 1.8 menu](minecraft_preview_2.jpeg)
+![Preview of the Minecraft 1.8 menu](minecraft_preview_3.jpeg)
 
 ---
 
