@@ -149,8 +149,6 @@ Rectangle {
             text: "Login"
             enabled: usernameTextField.text !== "" && passswordTextField.text !== ""
             onCustomClicked: {
-                console.log(usernameTextField.text);
-                console.log(passswordTextField.text);
                 sddm.login(usernameTextField.text, passswordTextField.text, root.sessionIndex);
             }
         }
@@ -162,8 +160,6 @@ Rectangle {
                 var action = root.actionMap[root.actionKeys[root.currentActionIndex]];
                 if (action.enabled)
                     action.method();
-                else
-                    console.log(root.actionKeys[root.currentActionIndex] + " is not supported");
             }
         }
 
@@ -180,7 +176,6 @@ Rectangle {
 
     Connections {
         function onLoginFailed() {
-            console.log("Login failed"); // TODO
             passswordTextField.text = "";
             passswordTextField.focus = true;
         }
