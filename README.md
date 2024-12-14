@@ -1,6 +1,6 @@
-# MinesDDM Theme
+# minesddm Theme
 
-MinesDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) (Simple Desktop Display Manager) inspired by Minecraft’s retro 1.8 version.
+minesddm is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) (Simple Desktop Display Manager) inspired by Minecraft’s retro 1.8 version.
 
 ---
 
