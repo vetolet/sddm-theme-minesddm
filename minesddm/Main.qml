@@ -7,9 +7,6 @@ import "components"
 Rectangle {
     id: root
 
-    // Login properties
-    property string username: usernameTextField.text
-    property string password: passswordTextField.text
     // Session properties. Please look at the SessionHandler.qml file to understand hwo these properties work
     property int sessionIndex: sessionModel.lastIndex
     property var sessions: []
@@ -150,11 +147,11 @@ Rectangle {
         // Login button
         CustomButton {
             text: "Login"
-            enabled: root.username !== "" && root.password !== ""
+            enabled: usernameTextField.text !== "" && passswordTextField.text !== ""
             onCustomClicked: {
-                console.log(root.username);
-                console.log(root.password);
-                sddm.login(root.user, root.password, root.sessionIndex);
+                console.log(usernameTextField.text);
+                console.log(passswordTextField.text);
+                sddm.login(usernameTextField.text, passswordTextField.text, root.sessionIndex);
             }
         }
 
@@ -182,10 +179,6 @@ Rectangle {
     }
 
     Connections {
-        function onLoginSucceeded() {
-            console.log("Login succeeded"); // TODO
-        }
-
         function onLoginFailed() {
             console.log("Login failed"); // TODO
             passswordTextField.text = "";
