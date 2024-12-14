@@ -4,17 +4,6 @@ MinesDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) (Si
 
 ---
 
-## Screenshots
-
-![Preview of the MinesDDM theme](screenshots/minesddm_preview_1.png)
-![Preview of the MinesDDM theme](screenshots/minesddm_preview_2.png)
-![Preview of the MinesDDM theme](screenshots/minesddm_preview_3.png)
-![Preview of the Minecraft 1.8 menu](minecraft_preview_1.png)
-![Preview of the Minecraft 1.8 menu](minecraft_preview_2.png)
-![Preview of the Minecraft 1.8 menu](minecraft_preview_3.png)
-
----
-
 ## Installation
 
 ### Prerequisites
@@ -52,6 +41,17 @@ MinesDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) (Si
 ### Theme Configuration
 
 Modify the `theme.conf` file to adjust the appearance and behavior of the theme.
+
+---
+
+## Screenshots
+
+![Preview of the MinesDDM theme](screenshots/minesddm_preview_1.png)
+![Preview of the MinesDDM theme](screenshots/minesddm_preview_2.png)
+![Preview of the MinesDDM theme](screenshots/minesddm_preview_3.png)
+![Preview of the Minecraft 1.8 menu](minecraft_preview_1.png)
+![Preview of the Minecraft 1.8 menu](minecraft_preview_2.png)
+![Preview of the Minecraft 1.8 menu](minecraft_preview_3.png)
 
 ---
 
