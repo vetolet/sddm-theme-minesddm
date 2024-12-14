@@ -91,13 +91,16 @@ Rectangle {
             height: config.itemsSpacing * 0.5
             color: "transparent" // Invisible spacer
         }
-        
+
         // Username field
         InputContainer {
             label: "World Name"
 
             UsernameTextField {
                 id: usernameTextField
+
+                text: userModel.lastUser
+                onAccepted: loginButton.clicked()
             }
 
         }
@@ -108,6 +111,9 @@ Rectangle {
 
             PasswordTextField {
                 id: passswordTextField
+
+                focus: true
+                onAccepted: loginButton.clicked()
             }
 
         }
@@ -146,9 +152,12 @@ Rectangle {
 
         // Login button
         CustomButton {
+            id: loginButton
+
             text: "Login"
             enabled: usernameTextField.text !== "" && passswordTextField.text !== ""
             onCustomClicked: {
+                console.log("login button clicked");
                 sddm.login(usernameTextField.text, passswordTextField.text, root.sessionIndex);
             }
         }
@@ -160,6 +169,7 @@ Rectangle {
                 var action = root.actionMap[root.actionKeys[root.currentActionIndex]];
                 if (action.enabled)
                     action.method();
+
             }
         }
 
