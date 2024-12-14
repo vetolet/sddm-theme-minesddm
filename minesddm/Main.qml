@@ -141,7 +141,7 @@ Rectangle {
             bottom: parent.bottom
             margins: config.itemsSpacing
             // Offset to ignore the size of the small button for centering
-            horizontalCenterOffset: 50
+            horizontalCenterOffset: config.itemHeight
         }
 
         // Login button
@@ -166,7 +166,7 @@ Rectangle {
         // Action selector button
         CustomButton {
             text: "->"
-            width: 50
+            width: config.itemHeight
             onCustomClicked: {
                 root.currentActionIndex = (root.currentActionIndex + 1) % root.actionKeys.length;
             }
