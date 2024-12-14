@@ -5,7 +5,7 @@ Rectangle {
     color: "black"
 
     border {
-        color: "white"
+        color: config.darkText
         width: config.labelBorderWidth
     }
 
