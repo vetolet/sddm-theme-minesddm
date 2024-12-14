@@ -2,7 +2,16 @@
 
 MinesDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) (Simple Desktop Display Manager) inspired by Minecraft’s retro aesthetic (The classic 1.8 version).
 
+---
+
+## Screenshots
+
 ![Preview of the MinesDDM theme](minesddm_preview_1.png)
+![Preview of the MinesDDM theme](minesddm_preview_2.png)
+![Preview of the MinesDDM theme](minesddm_preview_3.png)
+![Preview of the Minecraft 1.8 menu](minecraft_preview_1.png)
+![Preview of the Minecraft 1.8 menu](minecraft_preview_2.png)
+![Preview of the Minecraft 1.8 menu](minecraft_preview_3.png)
 
 ---
 
@@ -43,17 +52,6 @@ MinesDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) (Si
 ### Theme Configuration
 
 Modify the `theme.conf` file to adjust the appearance and behavior of the theme.
-
----
-
-## Screenshots
-
-![Preview of the MinesDDM theme](minesddm_preview_1.png)
-![Preview of the MinesDDM theme](minesddm_preview_2.png)
-![Preview of the MinesDDM theme](minesddm_preview_3.png)
-![Preview of the Minecraft 1.8 menu](minecraft_preview_1.png)
-![Preview of the Minecraft 1.8 menu](minecraft_preview_2.png)
-![Preview of the Minecraft 1.8 menu](minecraft_preview_3.png)
 
 ---
 
