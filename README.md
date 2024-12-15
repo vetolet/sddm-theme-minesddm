@@ -16,7 +16,7 @@ minesddm is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) (Si
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Davi-S/sddm-theme-minesddm.git ~/
+   git clone https://github.com/Davi-S/sddm-theme-minesddm.git ~/sddm-theme-minesddm
    ```
 
 2. **Copy the Theme Folder**:
