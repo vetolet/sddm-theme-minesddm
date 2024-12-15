@@ -36,6 +36,15 @@ Rectangle {
     property var actionKeys: Object.keys(root.actionMap)
     property int currentActionIndex: 0
 
+    function replacePlaceholders(text, placeholders) {
+        let result = text;
+        for (let key in placeholders) {
+            let placeholder = "{" + key + "}"; // Match the placeholder format
+            result = result.replace(placeholder, placeholders[key]);
+        }
+        return result;
+    }
+
     height: config.screenHeight || Screen.height
     width: config.screenWidth || Screen.ScreenWidth
 
@@ -93,8 +102,19 @@ Rectangle {
         }
 
         // Username field
-        InputContainer {
-            label: config.usernameTopLabel
+        Column {
+            spacing: config.labelFieldSpacing
+
+            Text {
+                text: config.usernameTopLabel
+                color: config.darkText
+
+                font {
+                    family: minecraftFont.name
+                    pixelSize: config.fontPixelSize
+                }
+
+            }
 
             UsernameTextField {
                 id: usernameTextField
@@ -103,11 +123,35 @@ Rectangle {
                 onAccepted: loginButton.clicked()
             }
 
+            Text {
+                text: root.replacePlaceholders(config.usernameBottomLabel, {
+                    "username": usernameTextField.text
+                })
+                color: usernameTextField.text && config.usernameBottomLabelUsernameOnly ? config.darkText : "transparent"
+
+                font {
+                    family: minecraftFont.name
+                    pixelSize: config.fontPixelSize
+                }
+
+            }
+
         }
 
         // Password field
-        InputContainer {
-            label: config.passwordTopLabel
+        Column {
+            spacing: config.labelFieldSpacing
+
+            Text {
+                text: config.passwordTopLabel
+                color: config.darkText
+
+                font {
+                    family: minecraftFont.name
+                    pixelSize: config.fontPixelSize
+                }
+
+            }
 
             PasswordTextField {
                 id: passswordTextField
@@ -116,22 +160,51 @@ Rectangle {
                 onAccepted: loginButton.clicked()
             }
 
+            Text {
+                text: config.passwordBottomLabel
+                color: passswordTextField.text && config.passwordBottomLabelPasswordOnly ? config.darkText : "transparent"
+
+                font {
+                    family: minecraftFont.name
+                    pixelSize: config.fontPixelSize
+                }
+
+            }
+
         }
 
         // Session selector button
         // Please look at the SessionHandler.qml file to understand what is happening here
-        CustomButton {
-            text: "Session: " + root.sessions[root.sessionIndex].name
-            onCustomClicked: {
-                root.sessionIndex = (root.sessionIndex + 1) % sessionModel.count;
+        Column {
+            spacing: config.labelFieldSpacing
+
+            CustomButton {
+                text: "Session: " + root.sessions[root.sessionIndex].name
+                onCustomClicked: {
+                    root.sessionIndex = (root.sessionIndex + 1) % sessionModel.count;
+                }
+
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+
+                SessionHandler {
+                    // Please look at the SessionHandler.qml file to understand what is happening here
+
+                }
+
             }
 
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-            }
+            Text {
+                text: root.sessions[root.sessionIndex].comment
+                color: config.darkText
+                wrapMode: Text.Wrap
+                width: config.inputWidth
 
-            SessionHandler {
-                // Please look at the SessionHandler.qml file to understand what is happening here
+                font {
+                    family: minecraftFont.name
+                    pixelSize: config.fontPixelSize
+                }
 
             }
 
