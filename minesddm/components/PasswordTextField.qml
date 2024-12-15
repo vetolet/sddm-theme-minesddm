@@ -7,7 +7,7 @@ TextField {
     width: config.inputWidth
     height: config.itemHeight
     color: config.lightText
-    placeholderText: "Password_"
+    placeholderText: config.passwordPlaceholder
     placeholderTextColor: config.darkText
     leftPadding: config.inputLeftPadding
 

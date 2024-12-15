@@ -71,7 +71,7 @@ Rectangle {
 
         // Main title
         Text {
-            text: "Log in to session"
+            text: config.mainTitleText
             color: config.lightText
 
             anchors {
@@ -94,7 +94,7 @@ Rectangle {
 
         // Username field
         InputContainer {
-            label: "World Name"
+            label: config.usernameTopLabel
 
             UsernameTextField {
                 id: usernameTextField
@@ -107,7 +107,7 @@ Rectangle {
 
         // Password field
         InputContainer {
-            label: "Seed"
+            label: config.passwordTopLabel
 
             PasswordTextField {
                 id: passswordTextField
