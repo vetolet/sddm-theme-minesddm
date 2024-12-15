@@ -40,7 +40,7 @@ minesddm is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) (Si
 
 ### Theme Configuration
 
-Modify the `theme.conf` file to adjust the appearance and behavior of the theme.
+Modify the `theme.conf` file to adjust the appearance and behavior of the theme. There are many options for you to adjust as you like
 
 ---
 
