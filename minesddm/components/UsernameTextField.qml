@@ -12,6 +12,7 @@ TextField {
         family: minecraftFont.name
         pixelSize: config.fontPixelSize
     }
+    leftPadding: config.inputLeftPadding
 
     background: TextFieldBackground {
     }

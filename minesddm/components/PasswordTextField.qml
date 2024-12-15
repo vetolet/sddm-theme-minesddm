@@ -9,6 +9,7 @@ TextField {
     color: config.lightText
     placeholderText: "Password_"
     placeholderTextColor: config.darkText
+    leftPadding: config.inputLeftPadding
 
     font {
         family: minecraftFont.name
