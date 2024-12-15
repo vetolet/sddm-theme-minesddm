@@ -127,7 +127,7 @@ Rectangle {
                 text: root.replacePlaceholders(config.usernameBottomLabel, {
                     "username": usernameTextField.text
                 })
-                color: usernameTextField.text && config.usernameBottomLabelUsernameOnly ? config.darkText : "transparent"
+                color: usernameTextField.text || config.usernameBottomLabelAlways ? config.darkText : "transparent"
 
                 font {
                     family: minecraftFont.name
@@ -162,7 +162,7 @@ Rectangle {
 
             Text {
                 text: config.passwordBottomLabel
-                color: passswordTextField.text && config.passwordBottomLabelPasswordOnly ? config.darkText : "transparent"
+                color: passswordTextField.text || config.passwordBottomLabelAlways ? config.darkText : "transparent"
 
                 font {
                     family: minecraftFont.name
