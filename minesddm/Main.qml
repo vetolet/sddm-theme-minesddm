@@ -79,17 +79,12 @@ Rectangle {
         }
 
         // Main title
-        Text {
+        CustomText {
             text: config.mainTitleText
             color: config.lightText
 
             anchors {
                 horizontalCenter: parent.horizontalCenter
-            }
-
-            font {
-                family: minecraftFont.name
-                pixelSize: config.fontPixelSize
             }
 
         }
@@ -105,15 +100,8 @@ Rectangle {
         Column {
             spacing: config.labelFieldSpacing
 
-            Text {
+            CustomText {
                 text: config.usernameTopLabel
-                color: config.darkText
-
-                font {
-                    family: minecraftFont.name
-                    pixelSize: config.fontPixelSize
-                }
-
             }
 
             UsernameTextField {
@@ -123,17 +111,11 @@ Rectangle {
                 onAccepted: loginButton.clicked()
             }
 
-            Text {
+            CustomText {
                 text: root.replacePlaceholders(config.usernameBottomLabel, {
                     "username": usernameTextField.text
                 })
                 color: usernameTextField.text || config.usernameBottomLabelAlways ? config.darkText : "transparent"
-
-                font {
-                    family: minecraftFont.name
-                    pixelSize: config.fontPixelSize
-                }
-
             }
 
         }
@@ -142,15 +124,8 @@ Rectangle {
         Column {
             spacing: config.labelFieldSpacing
 
-            Text {
+            CustomText {
                 text: config.passwordTopLabel
-                color: config.darkText
-
-                font {
-                    family: minecraftFont.name
-                    pixelSize: config.fontPixelSize
-                }
-
             }
 
             PasswordTextField {
@@ -160,15 +135,9 @@ Rectangle {
                 onAccepted: loginButton.clicked()
             }
 
-            Text {
+            CustomText {
                 text: config.passwordBottomLabel
                 color: passswordTextField.text || config.passwordBottomLabelAlways ? config.darkText : "transparent"
-
-                font {
-                    family: minecraftFont.name
-                    pixelSize: config.fontPixelSize
-                }
-
             }
 
         }
@@ -195,17 +164,10 @@ Rectangle {
 
             }
 
-            Text {
+            CustomText {
                 text: root.sessions[root.sessionIndex].comment
-                color: config.darkText
                 wrapMode: Text.Wrap
                 width: config.inputWidth
-
-                font {
-                    family: minecraftFont.name
-                    pixelSize: config.fontPixelSize
-                }
-
             }
 
         }
