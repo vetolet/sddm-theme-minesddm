@@ -57,7 +57,7 @@ Rectangle {
 
     // This is the background image
     Image {
-        source: "images/dirt.png"
+        source: "images/background.png"
         fillMode: Image.PreserveAspectCrop
         clip: true
 
