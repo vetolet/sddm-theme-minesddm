@@ -1,6 +1,6 @@
-# minesddm Theme
+# MineSDDM Theme
 
-minesddm is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) (Simple Desktop Display Manager) inspired by Minecraft’s retro 1.8 version.
+MineSDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) inspired by Minecraft’s retro 1.8 version and by the [Minecraft GRUB Theme](https://github.com/Lxtharia/minegrub-theme) by Lxtharia
 
 ---
 
@@ -67,11 +67,5 @@ This project is licensed under the [GNU Affero General Public License v3.0](LICE
 ## Contributions
 
 Contributions are welcome! Feel free to open issues or submit pull requests to improve this project.
-
----
-
-## Acknowledgments
-
-- Inspired by Minecraft’s iconic design and by the [minegrub](https://github.com/Lxtharia/minegrub-theme) grub theme.
 
 ---
