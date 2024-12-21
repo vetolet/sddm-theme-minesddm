@@ -2,6 +2,7 @@
 
 MineSDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) inspired by Minecraft’s retro 1.8 version and by the [Minecraft GRUB Theme](https://github.com/Lxtharia/minegrub-theme) by Lxtharia
 
+![Preview of the MinesDDM theme](screenshots/minesddm_preview_3.png)
 ---
 
 ## Installation
