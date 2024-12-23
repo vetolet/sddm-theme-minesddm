@@ -11,7 +11,7 @@ Description=MineSDDM is a custom theme for SDDM inspired by Minecraft’s retro 
 Minecraft GRUB Theme by Lxtharia
 Description[tw]=MineSDDM 主題是模擬 Minecraft retro v1.8 界面的登入畫面（sddm）主題，受 Lxtharia 的
 Minecraft GRUB Theme 所啟發
-Preview=screenshot.jpeg
+Preview=screenshot.png
 MainScript=Main.qml
 Author=Davis-S, Oliver Tzeng
 License=AGPL-3.0
