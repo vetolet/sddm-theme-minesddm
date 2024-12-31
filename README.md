@@ -35,12 +35,11 @@ MineSDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) ins
 3. **Logout of your session**:
    Logout and you will (probably) see the new theme
 
-## NixOS Installation
+### NixOS Installation
 
-### Instalation with flakes
+<details>
+<summary>Installation with flakes</summary>
 
-> ![NOTE]
-> They're real and they will hurt you
 ```nix
 {
    # ...
@@ -76,6 +75,7 @@ MineSDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) ins
   };
 }
 ```
+</details>
 
 ---
 
