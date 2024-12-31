@@ -49,7 +49,7 @@ MineSDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) ins
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     minesddm = {
-      url = "github:sopyb/sddm-theme-minesddm";
+      url = "github:Davi-S/sddm-theme-minesddm";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
