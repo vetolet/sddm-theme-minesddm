@@ -65,7 +65,7 @@ MineSDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) ins
 
             # or in your configuration.nix
             ({ config, pkgs, ... }: {
-               services.xserver.displayManager.sddm = {
+               services.displayManager.sddm.enable = {
                   enable = true;
                   theme = "minesddm";
                };
