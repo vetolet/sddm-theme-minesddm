@@ -13,7 +13,7 @@ MineSDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) ins
 - **Qt**: Requires Qt 5.15 or later.
 - **Dependencies**: Confirm that your system has all SDDM, QT, and other system-specific dependencies installed.
 
-### Manual instalation
+### Manual Instalation
 
 Should work on most systems
 
@@ -39,9 +39,7 @@ Should work on most systems
 
 ---
 
-## Customization
-
-### Theme Configuration
+## Theme Customization
 
 To override settings in the `theme.conf` configuration file, create a custom `theme.conf.user` file in the same directory and add the settings to overide. ([Reference](https://wiki.archlinux.org/title/SDDM#Customizing_a_theme))
 
@@ -49,12 +47,12 @@ To override settings in the `theme.conf` configuration file, create a custom `th
 
 ## Screenshots
 
-### minesddm
+### MineSDDM
 ![Preview of the MinesDDM theme](screenshots/minesddm_preview_1.png)
 ![Preview of the MinesDDM theme](screenshots/minesddm_preview_2.png)
 ![Preview of the MinesDDM theme](screenshots/minesddm_preview_3.png)
 
-### Minecraft
+### Minecraft (for comparison)
 ![Preview of the Minecraft 1.8 menu](screenshots/minecraft_preview_1.jpeg)
 ![Preview of the Minecraft 1.8 menu](screenshots/minecraft_preview_2.jpeg)
 ![Preview of the Minecraft 1.8 menu](screenshots/minecraft_preview_3.jpeg)
