@@ -11,9 +11,11 @@ MineSDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) ins
 
 - **SDDM**: Ensure that SDDM is installed and set as your system’s display manager.
 - **Qt**: Requires Qt 5.15 or later.
-- **Dependencies**: Confirm that your system supports QML and necessary libraries.
+- **Dependencies**: Confirm that your system has all SDDM, QT, and other system-specific dependencies installed.
 
-### Steps
+### Manual instalation
+
+Should work on most systems
 
 1. **Clone the Repository**:
    ```bash
@@ -26,7 +28,7 @@ MineSDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) ins
    ```
 
 3. **Set the Theme in SDDM**:
-   Edit the SDDM configuration file (usually located at `/etc/sddm.conf` or `/etc/sddm.conf.d/default.conf`):
+   Edit the SDDM configuration file (usually located at `/etc/sddm.conf` file or `/etc/sddm.conf.d/` directory):
    ```ini
    [Theme]
    Current=minesddm
@@ -41,7 +43,7 @@ MineSDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) ins
 
 ### Theme Configuration
 
-Modify the `theme.conf` file to adjust the appearance and behavior of the theme. There are many options for you to adjust as you like
+To override settings in the `theme.conf` configuration file, create a custom `theme.conf.user` file in the same directory and add the settings to overide. ([Reference](https://wiki.archlinux.org/title/SDDM#Customizing_a_theme))
 
 ---
 
