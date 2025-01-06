@@ -83,7 +83,7 @@ Should work on most systems
 
 ## Theme Customization
 
-To override settings in the `theme.conf` configuration file, create a custom `theme.conf.user` file in the same directory and add the settings to overide. ([Reference](https://wiki.archlinux.org/title/SDDM#Customizing_a_theme))
+To override settings in the `theme.conf` configuration file, create a custom `theme.conf.user` file in the same directory and add the settings you want to override. ([Reference](https://wiki.archlinux.org/title/SDDM#Customizing_a_theme))
 
 ---
 
