@@ -37,6 +37,48 @@ Should work on most systems
 3. **Logout of your session**:
    Logout and you will (probably) see the new theme
 
+### NixOS Installation
+
+<details>
+<summary>Installation with flakes</summary>
+
+```nix
+{
+   # ...
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    minesddm = {
+      url = "github:Davi-S/sddm-theme-minesddm";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+  outputs = { self, nixpkgs, minesddm }: {
+    nixosConfigurations = {
+      hostname = nixpkgs.lib.nixosSystem {
+         system = "x86_64-linux";
+         modules = [
+            # ...
+
+            minesddm.nixosModules.default
+
+            # or in your configuration.nix
+            ({ config, pkgs, ... }: {
+               services.displayManager.sddm = {
+                  enable = true;
+                  theme = "minesddm";
+               };
+            });
+        ];
+      };
+    };
+  };
+}
+```
+</details>
+
 ---
 
 ## Theme Customization
