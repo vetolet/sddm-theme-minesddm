@@ -75,7 +75,7 @@ Rectangle {
         anchors {
             horizontalCenter: parent.horizontalCenter
             top: parent.top
-            topMargin: config.itemsSpacing * 2
+            topMargin: config.topMargin
         }
 
         // Main title
@@ -180,7 +180,7 @@ Rectangle {
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.bottom
-            margins: config.itemsSpacing
+            bottomMargin: config.bottomMargin
             // Offset to ignore the size of the small button for centering
             horizontalCenterOffset: config.itemHeight
         }
