@@ -11,7 +11,7 @@ MineSDDM is a custom theme for [SDDM](https://wiki.archlinux.org/title/SDDM) ins
 
 - **SDDM**: Ensure that SDDM is installed and set as your system’s display manager.
 - **Qt**: Requires Qt 5.15 or later.
-- **Dependencies**: Confirm that your system has all SDDM, QT, and other system-specific dependencies installed.
+- **Dependencies**: Confirm that your system has all SDDM, QT, and other system-specific dependencies installed. For example `qt5-quickcontrols2`, `layer-shell-qt5`, and `layer-shell-qt`.
 
 ### Manual Instalation
 
