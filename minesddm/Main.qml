@@ -148,10 +148,12 @@ Rectangle {
             spacing: config.labelFieldSpacing
 
             CustomButton {
-                text: "Session: " + root.sessions[root.sessionIndex].name
-                onCustomClicked: {
-                    root.sessionIndex = (root.sessionIndex + 1) % sessionModel.count;
-                }
+                // text: "Session: " + root.sessions[root.sessionIndex].name
+                text: "Session: KDE plasma"
+                width: config.inputWidth
+                // onCustomClicked: {
+                //     root.sessionIndex = (root.sessionIndex + 1) % sessionModel.count;
+                // }
 
                 anchors {
                     horizontalCenter: parent.horizontalCenter
@@ -164,11 +166,11 @@ Rectangle {
 
             }
 
-            CustomText {
-                text: root.sessions[root.sessionIndex].comment
-                wrapMode: Text.Wrap
-                width: config.inputWidth
-            }
+            // CustomText {
+            //     text: root.sessions[root.sessionIndex].comment
+            //     wrapMode: Text.Wrap
+            //     width: config.inputWidth
+            // }
 
         }
 
